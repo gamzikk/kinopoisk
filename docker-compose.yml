@@ -1,0 +1,25 @@
+services:
+  web-app:
+    build:
+      context: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./kinopoisk:/kinopoisk/
+#    environment:
+#      - DB_NAME=dbname
+#      - DB_USER=dbuser
+#      - DB_PASS=pass
+#      - DB_HOST=database
+    container_name: kinopoisk
+    command: python manage.py runserver 0.0.0.0:8000
+    depends_on:
+      - database
+
+  database:
+    image: postgres:15
+    environment:
+      - POSTGRES_DB=dbname
+      - POSTGRES_USER=dbuser
+      - POSTGRES_PASSWORD=pass
+    container_name: postgres_db

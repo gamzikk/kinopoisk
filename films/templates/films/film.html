@@ -1,0 +1,54 @@
+{% extends 'main/layout.html' %}
+
+{% load static %}
+
+{% block title %}
+    {{ film.name }}
+{% endblock %}
+
+{% block main %}
+    <div class="main__container">
+        <div class="film__container">
+        	<div class="film__card clear-fix">
+                <div class="film_img" style="background-image: url({{ film.image.url }})"></div>
+            </div>
+            <div class="film__info">
+            	{{ film.name }}<br>
+            	{{ film.director }}<br>
+                {{ film.country }}<br>
+            	{{ film.text }}
+                {{ film.by_subscription }}
+            </div>
+            <button>Смотреть</button>
+        </div>
+        <div class="rating">
+            <h3>Оставить отзыв:</h3>
+            {% if request.user.is_authenticated %}
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form.mark }}
+                    <!-- {{ form.user }} -->
+                    <!-- <input type="hidden" value="{{ film.id }}" name="film"> -->
+                    <!-- {{ form.film }} -->
+                    <input type="submit" value="Оценить">
+                </form>
+            {% else %}
+                <a href="{% url 'login' %}">Необходимо авторизаваться</a>
+            {% endif %}
+        </div>
+        <div class="commets">
+            <h3>Комментарии:</h3>
+            <form method="post">
+                {% csrf_token %}
+                <!-- {{ comment_form.user }}
+                {{ comment_form.film }} -->
+                {{ comment_form.text }}
+                <input type="submit" value="Оставить комментарий">
+            </form>
+            {% for comment in comments %}
+                {{ comment.user.username }}
+                {{ comment.text }}
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

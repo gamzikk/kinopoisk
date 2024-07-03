@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Авторизация</title>
+	<link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+</head>
+<body>
+	<div class="block_form">
+		<a href="{% url 'main' %}">
+			<img class="logo" src="{% static 'main/img/logo.svg' %}" alt="logo">
+		</a>
+		<h3>Войдите</h3>
+		<form class="register" method='post'>
+			{% csrf_token %}
+
+			{{ form.email }}
+			{{ form.password }}
+
+			<input class="button" type="submit" value='Войти'>
+		</form>
+		<a href="{% url 'register' %}">Зарегистрироваться</a>
+	</div>
+</body>
+</html>

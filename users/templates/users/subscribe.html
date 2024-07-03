@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Премиум подписка</title>
+	<link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+</head>
+<body>
+	<div class="subscribe__block">
+		<a class="logo" href="{% url 'main' %}">КИНОПОИСК</a>
+		<div class="text1">Фильмы и сериалы по подписке</div>
+		<div class="text2">"Смотрю всё, что хочу"</div>
+		<form method="post">
+			{% csrf_token %}
+			{{ form.subscription }}
+			<input class="subscribe-btn" type="submit" value="Оформить подписку на 30 дней">
+		</form>
+	</div>
+</body>
+</html>

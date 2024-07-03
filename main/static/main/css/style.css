@@ -1,0 +1,106 @@
+html, body {
+    font-family: Montserrat, sans-serif;
+}
+
+html {
+	margin: 0;
+	height: 100%;
+    width: 100%;
+   	background-image: url("../img/login_fon.jpg")
+}
+
+body {
+	display: flex;
+	margin: 0;
+	height: 100%;
+    width: 100%;
+	justify-content: center;
+}
+
+.block_form {
+	margin-top: 150px;
+	height: 600px;
+	width: 400px;
+	border-radius: 15px;
+	background-color: #2B2B2B;
+}
+
+.block_form a {
+	margin-left: 85px;
+}
+
+.logo {
+	margin-left: 360px;
+	font-size: 30px;
+	font-weight: 900;
+	text-decoration: none;
+	color: #ffbf00;
+}
+
+.block_form h3 {
+	margin-left: 110px;
+	color: #d9d9d9;
+}
+
+.register {
+	display: flex;
+	flex-direction: column;
+	height: 400px;
+	width: 500px;
+}
+
+.input {
+	margin-left: 45px;
+	margin-bottom: 20px;
+	height: 30px;
+	width: 300px;
+	border: 2px solid #171515;
+	border-radius: 7px;
+	background-color: #2B2B2B;
+}
+
+.button {
+	margin-top: 10px;
+	margin-left: 45px;
+	height: 40px;
+	width: 300px;
+	border: 2px solid #d8e02f;
+	border-radius: 7px;
+	background-color: #d8e02f;
+}
+
+
+
+
+
+/*subscribe.html*/
+
+.subscribe__block {
+	margin-top: 50px;
+	width: 930px;
+}
+
+.text1 {
+	margin-top: 20px;
+	font-size: 50px;
+	font-weight: 900;
+	color: #fff;
+}
+
+.text2 {
+	margin-left: 140px;
+	font-size: 50px;
+	font-weight: 900;
+	color: #fff;
+}
+
+.subscribe-btn {
+	margin-top: 30px;
+	margin-left: 325px;
+	height: 50px;
+	width: 310px;
+	font-size: 18px;
+	border-radius: 30px;
+	border: 0px;
+	background: linear-gradient(to right, blue, pink);
+}

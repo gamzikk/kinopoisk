@@ -1,0 +1,29 @@
+{% extends 'main/layout.html' %}
+
+{% load static %}
+
+{% block title %}
+    Фильмы
+{% endblock %}
+
+{% block main %}
+    <div class="main__container">
+        <div class="album">
+            <div class="album__info">
+                <h1 class="title_album">Фильмы и сериалы</h1>
+                <p class="text_album">Мы собрали для вас лучшие фильмы и сериалы планеты в одном месте.</p>
+            </div>
+            <img src="{% static 'main/img/img_album.png' %}" class="img_album">
+        </div>
+        <div class="films">
+        {% for film in films %}
+            <a href="{% url 'film' film.id %}">
+                <div class="film__card clear-fix">
+                    <div class="film_img" style="background-image: url({{ film.image.url }})"></div>
+                    {{ film.name }}
+                </div>
+            </a>
+        {% endfor %}
+        </div>
+    </div>
+{% endblock %}

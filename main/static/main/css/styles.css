@@ -1,0 +1,119 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    line-height: 1;
+    font-family: Montserrat, sans-serif;
+}
+
+.wrapper {
+    overflow: hidden;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+
+.header {
+    position: fixed;
+    height: 72px;
+    width: 100%;
+    background-color: #2B2B2B;
+}
+
+.header__container {
+    display: flex;
+    margin: 0px 320px;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+}
+
+.menu_link {
+    color: #fff;
+    text-decoration: none;
+}
+
+.main {
+    flex: 1 0 auto;
+    margin-top: 72px;
+    background-color: #E9E9E9;
+}
+
+.main__container {
+    /* display: flex; */
+    margin: 0px 320px;
+    height: 100%;
+    width: 1280px;
+    background-color: #fff;
+}
+
+.album {
+    display: flex;
+}
+
+.films {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px 40px;
+}
+
+.film__card {
+    margin: 20px;
+    box-sizing: border-box;
+}
+
+.clear-fix::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.film_img {
+    height: 270px;
+    width: 200px;
+    box-sizing: border-box;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+/*profile.html*/
+
+.main_profile {
+    margin: 10px;
+    float: left;
+    overflow: hidden;
+    box-sizing: border-box;
+    background-color: #333;
+}
+
+.avatar_profile {
+    display: block;
+    float: left;
+    height: 160px;
+    width: 160px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+
+.footer {
+    flex: 0 0 auto;
+    height: 72px;
+    width: 100%;
+    background-color: #2B2B2B;
+}

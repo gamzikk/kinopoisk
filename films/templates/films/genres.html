@@ -1,0 +1,15 @@
+{% extends 'main/layout.html' %}
+
+{% load static %}
+
+{% block title %}
+    Жанры
+{% endblock %}
+
+{% block main %}
+    <div class="main__container">
+        {% for film in films %}
+            {{ film.name }}
+        {% endfor %}
+    </div>
+{% endblock %}
